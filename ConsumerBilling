@@ -1,0 +1,37 @@
+string consumerType;
+char category;
+int Months=0, i , Totalunits = 0 ;
+Float MonthlyUnits[Months], Bill;
+Read Months;
+For(i = 0; i < Months; i++)
+Read MonthlyUnits[i];
+Totalunits = Totalunits + MonthlyUnits[i];
+End for
+Read consumerType;
+ if (consumerType = ‘Government Employee’)
+ print ‘You are eligible for 5% subsidy.’
+ Read category 
+ switch (category) 
+case “A”:
+Bill= Totalunits * 1.5 * 0.95;
+Print “Your total bill is” Bill;
+case “B”:
+For(i = 0; i < Months; i++)
+Bill= MonthlyUnits[i] * 1.5 * 0.95;
+Print i + “Month” + bill;
+End for 
+End switch
+else
+Print ‘You will be charged with standard rates.’
+ Read category 
+ switch (category) 
+case “A”:
+Bill= Totalunits * 1.5 ;
+Print “Your total bill is” + Bill;
+case “B”:
+For(i = 0; i < Months; i++)
+Bill= MonthlyUnits[i] * 1.5 ;
+Print i + “Month” + Bill;
+End for 
+End switch
+End if
