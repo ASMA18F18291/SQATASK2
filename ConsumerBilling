@@ -8,16 +8,14 @@ Read MonthlyUnits[i];
 Totalunits = Totalunits + MonthlyUnits[i];
 End for
 Read consumerType;
- if (consumerType = ‘Government Employee’)
- print ‘You are eligible for 5% subsidy.’
  Read category 
  switch (category) 
 case “A”:
-Bill= Totalunits * 1.5 * 0.95;
+Bill= Totalunits * 1.2;
 Print “Your total bill is” Bill;
 case “B”:
 For(i = 0; i < Months; i++)
-Bill= MonthlyUnits[i] * 1.5 * 0.95;
+Bill= MonthlyUnits[i] * 1.2;
 Print i + “Month” + bill;
 End for 
 End switch
